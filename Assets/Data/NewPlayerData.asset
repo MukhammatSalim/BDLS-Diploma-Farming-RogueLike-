@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: NewPlayerData
   m_EditorClassIdentifier: 
   Name: Aboba
+  MaxHP: 0
+  CurrentHP: 0
+  Damage: 0
   MovementSpeed: 5
-  BulletSpeed: 28.06
+  BulletSpeed: 100
   BulletLifeTime: 2
   FireRate: 0.5
   Spread: 0

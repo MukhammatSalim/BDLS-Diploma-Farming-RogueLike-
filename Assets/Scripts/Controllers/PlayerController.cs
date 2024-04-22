@@ -6,8 +6,6 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     Vector3 mousePosition;
     public CharacterController characterController;
-    [Header("Connections")]
-    public PlayerData playerData;
     [Header("Shooting")]
     public GameObject BulletPrefab;
     public Transform GunEnd;
@@ -29,7 +27,7 @@ public class PlayerController : MonoBehaviour
         transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z);
 
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-        characterController.Move(move * Time.deltaTime * playerData.MovementSpeed);
+        characterController.Move(move * Time.deltaTime * PlayerManager.instance.playerData.MovementSpeed);
 
         if (Input.GetKey(KeyCode.Mouse0))
         {
@@ -42,13 +40,13 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Pew");
             GameObject bullet = BulletPrefab;
-            bullet.GetComponent<BulletScript>().BulletLifeTime = playerData.BulletLifeTime; 
+            bullet.GetComponent<BulletScript>().BulletLifeTime = PlayerManager.instance.playerData.BulletLifeTime; 
             GameObject NewBullet = Instantiate(bullet, GunEnd.transform.position, transform.rotation);
             Rigidbody2D b = NewBullet.GetComponent<Rigidbody2D>();
-            b.AddForce(b.transform.up * playerData.BulletSpeed, ForceMode2D.Force);
+            b.AddForce(b.transform.up * PlayerManager.instance.playerData.BulletSpeed, ForceMode2D.Force);
             
             CanShoot = false;
-            yield return new WaitForSeconds(playerData.FireRate);
+            yield return new WaitForSeconds(PlayerManager.instance.playerData.FireRate);
             CanShoot = true;
         }
     }

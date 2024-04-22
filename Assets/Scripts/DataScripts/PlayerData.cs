@@ -8,6 +8,10 @@ public class PlayerData : ScriptableObject
     [Header("Profile")]
     public string Name;
     [Header("GameData:")]
+    [Header("Stats")]
+    public float MaxHP;
+    public float CurrentHP;
+    public float Damage;
     [Header("Movement")]
     public float MovementSpeed;
     [Header("Shooting")]
