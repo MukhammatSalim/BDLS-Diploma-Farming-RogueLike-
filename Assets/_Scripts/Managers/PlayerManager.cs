@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour, IDamagable
@@ -5,6 +6,8 @@ public class PlayerManager : MonoBehaviour, IDamagable
     [Header("Connections")]
     public PlayerData playerData;
     public static PlayerManager instance;
+    [Header("Other Colliders")]
+    public static Collider2D VisionRadius = new Collider2D();
     private void Awake()
     {
         if (instance == null) instance = this;

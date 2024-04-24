@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df230052dbb9ad4ebc3ba200b8dd29d, type: 3}
   m_Name: NewPlayerData
   m_EditorClassIdentifier: 
-  Name: Aboba
-  MaxHP: 0
-  CurrentHP: 0
-  Damage: 0
+  Name: Bruh
+  MaxHP: 100
+  CurrentHP: 100
+  Damage: 10
   MovementSpeed: 5
-  BulletSpeed: 100
-  BulletLifeTime: 2
-  FireRate: 0.5
-  Spread: 0
+  BulletSpeed: 5
+  BulletLifeTime: 1
+  FireRate: 1
+  Spread: 3
