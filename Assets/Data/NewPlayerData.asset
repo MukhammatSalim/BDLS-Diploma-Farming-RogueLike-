@@ -16,7 +16,7 @@ MonoBehaviour:
   MaxHP: 100
   CurrentHP: 100
   Damage: 10
-  MovementSpeed: 5
+  MovementSpeed: 15
   BulletSpeed: 5
   BulletLifeTime: 1
   FireRate: 1

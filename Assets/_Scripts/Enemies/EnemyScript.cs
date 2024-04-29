@@ -20,7 +20,7 @@ public class EnemyScript : MonoBehaviour, IDamagable
         Debug.Log("Enemy is dead");
     }
     private void Update() {
-        gameObject.transform.position = Vector2.MoveTowards(transform.position,PlayerManager.instance.gameObject.transform.position, MovementSpeed * Time.deltaTime);
+        //gameObject.transform.position = Vector2.MoveTowards(transform.position,PlayerManager.instance.gameObject.transform.position, MovementSpeed * Time.deltaTime);
     }
 
 }
